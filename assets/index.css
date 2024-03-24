@@ -173,7 +173,7 @@ table thead tr, table tfoot tr {
   color: #FFFFFF;
 }
 
-table tbody tr:nth-child(odd) {
+table tbody tr:nth-child(even) {
   background-color: #f5f8ff;
 }
 
