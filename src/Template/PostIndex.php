@@ -22,8 +22,8 @@ class PostIndex extends Layout
                     </tr>
                 </thead>
                 <tbody>
-                    <?php if($posts) { ?>
-                        <?php foreach($posts as $post) { ?>
+                    <?php if ($posts) { ?>
+                        <?php foreach ($posts as $post) { ?>
                             <tr>
                                 <td><?=$post->title?></td>
                                 <td><?=$post->author->full_name?></td>

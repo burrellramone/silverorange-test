@@ -40,7 +40,7 @@ class App
             $controller = new Controller\Root($this->db, []);
         } elseif (preg_match('@^/posts/?$@', $path) === 1) {
             $controller = new Controller\PostIndex($this->db, []);
-        } elseif (preg_match('@^/posts/([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})/?$@', $path, $params) === 1) {
+        } elseif (preg_match("@^/posts/([a-f0-9-]{36})/?$@", $path, $params) === 1) {
             array_shift($params);
             $controller = new Controller\PostDetails($this->db, $params);
         } elseif (preg_match('@^/checkout/?$@', $path) === 1) {

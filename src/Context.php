@@ -1,11 +1,11 @@
 <?php
 
 namespace silverorange\DevTest;
+
 use silverorange\DevTest\Model\Post;
 
-class Context {
-
-
+class Context
+{
     public string $title = '';
 
     public string $content = '';
@@ -14,7 +14,8 @@ class Context {
 
     public ?Post $post;
 
-    public function getPostId():?string {
+    public function getPostId(): ?string
+    {
         return @$this->post->id;
     }
 }

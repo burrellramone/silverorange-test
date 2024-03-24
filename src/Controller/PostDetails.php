@@ -54,16 +54,16 @@ class PostDetails extends Controller
         $stmt = $this->db->query($query, \PDO::FETCH_CLASS, 'silverorange\DevTest\Model\Post');
         $this->post = $stmt->fetch();
 
-        if($this->post){
+        if ($this->post) {
             $author_id = $this->post->author_id;
 
             $query = "SELECT authors.*
                     FROM authors 
                     WHERE id = '{$author_id}'";
-                    
-            $stmt = $this->db->query($query, \PDO::FETCH_CLASS,  'silverorange\DevTest\Model\Author');
+
+            $stmt = $this->db->query($query, \PDO::FETCH_CLASS, 'silverorange\DevTest\Model\Author');
             $author = $stmt->fetch();
             $this->post->author = $author;
-        } 
+        }
     }
 }

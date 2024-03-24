@@ -16,7 +16,7 @@
     "erusev/parsedown": "^1.7"
   },
   "require-dev": {
-    "squizlabs/php_codesniffer": "^3.7.1"
+    "squizlabs/php_codesniffer": "^3.9"
   },
   "scripts": {
     "lint": [

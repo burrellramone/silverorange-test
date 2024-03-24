@@ -25,7 +25,7 @@ class PostDetails extends Layout
         </div>
         <?php
         $page = ob_get_clean();
-        
+
         return $page;
     }
 }
