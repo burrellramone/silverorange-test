@@ -10,7 +10,7 @@ class Root extends Layout
     {
         // @codingStandardsIgnoreStart
         return <<<HTML
-<p>Things are up and running—you’ve got this!</p>
+<p>Things are up and running—you've got this!</p>
 HTML;
         // @codingStandardsIgnoreEnd
     }

@@ -8,7 +8,7 @@ create table Posts (
   created_at timestamp not null,
   modified_at timestamp not null,
 
-  author uuid not null references authors(id) on delete cascade,
+  author_id uuid not null references authors(id) on delete cascade,
 
   primary key (id)
 );

@@ -37,6 +37,28 @@ button {
   cursor: pointer;
 }
 
+a {
+  color: darkgoldenrod;
+}
+
+table {
+  width:100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+tr {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+tr.no-posts td {
+  text-align: center;
+}
+
 .footer {
   flex: 0 0 auto;
   background: #eee;
@@ -47,7 +69,7 @@ button {
 
 .container {
   margin: 0 auto;
-  max-width: 32rem;
+  max-width: 50rem;
   padding: 2rem 1rem;
 }
 
@@ -139,4 +161,32 @@ button {
 
 form button[type="submit"].btn {
   width: 100%;
+}
+
+.ptctr {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table thead tr, table tfoot tr {
+  background-color: #4b8ec9;
+  color: #FFFFFF;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #f5f8ff;
+}
+
+table tbody tr:hover {
+  background-color: #dee8ff;
+}
+
+.post .post-title, 
+.post .post-author,
+.post .post-body {
+  padding: 5px 0px;
+}
+
+.post .post-title, .post .post-author {
+  border-bottom: 1px solid #eee;
 }

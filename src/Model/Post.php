@@ -9,5 +9,6 @@ class Post
     public string $body;
     public string $created_at;
     public string $modified_at;
-    public string $author;
+    public string $author_id;
+    public ?Author $author;
 }

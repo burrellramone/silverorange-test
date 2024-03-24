@@ -19,6 +19,7 @@ class PostDetails extends Controller
             $context->content = "A post with id {$this->params[0]} was not found.";
         } else {
             $context->title = $this->post->title;
+            $context->post = $this->post;
         }
 
         return $context;
@@ -44,7 +45,25 @@ class PostDetails extends Controller
 
     protected function loadData(): void
     {
-        // TODO: Load post from database here. $this->params[0] is the post id.
-        $this->post = null;
+        $id = $this->params[0];
+
+        $query = "SELECT posts.*
+                    FROM posts
+                    WHERE posts.id = '{$id}'";
+
+        $stmt = $this->db->query($query, \PDO::FETCH_CLASS, 'silverorange\DevTest\Model\Post');
+        $this->post = $stmt->fetch();
+
+        if($this->post){
+            $author_id = $this->post->author_id;
+
+            $query = "SELECT authors.*
+                    FROM authors 
+                    WHERE id = '{$author_id}'";
+                    
+            $stmt = $this->db->query($query, \PDO::FETCH_CLASS,  'silverorange\DevTest\Model\Author');
+            $author = $stmt->fetch();
+            $this->post->author = $author;
+        } 
     }
 }
