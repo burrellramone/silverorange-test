@@ -35,8 +35,6 @@ class App
     {
         $controller = new Controller\NotFound($this->db, []);
 
-        // TODO: Do stuff like parse query params from $_GET here if required.
-
         // Switch to set up different context data for different URLs.
         if (preg_match('@^/?$@', $path) === 1) {
             $controller = new Controller\Root($this->db, []);
